@@ -37,11 +37,7 @@ class ViewModel {
             let resp = try JSONDecoder().decode(Model_Data.self, from: jsonData)
             let arr = resp.page?.contentitems?.content ?? []
             self.dispArr?.append(contentsOf: arr)
-//            dispArr =
             self.titleLbl = resp.page?.title
-            print(dispArr)
-//            self.dispArr?.append(contentsOf: resp.page?.contentitems?.content ?? [])
-            print("===================================")
         } catch {
             print("decode error")
         }
